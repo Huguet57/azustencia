@@ -8,6 +8,7 @@ Add private messaging.
 */
 
 const utils = require('./js/utils')
+const Locking = require('./js/Locking')
 
 const express = require('express');
 const cookieParser = require('cookie-parser')
@@ -37,53 +38,39 @@ app.get('/getcookie', (req, res) => {
   res.send(req.cookies);
 });
 
-let locked_boxes = {};
-let users_locking = {};
+let lock = new Locking.Locking();
 
 io.on('connection', (socket) => {
   let user_id = socket.id;
 
   // On connection, load locked information
-  let ids_colors = Object.fromEntries(Object.entries(locked_boxes).map(([k, id]) => [k, utils.alphanumeric2Color(id)]));
-  io.emit('lock', ids_colors);
+  lock.update_locks(io);
 
   socket.on('lock', id => {
-    // Define previously locked box
-    let previously_locked_id = undefined;
-    if (user_id in users_locking) {
-      previously_locked_id = users_locking[user_id];
+    // Define previously locked box and unlock it
+    let previously_locked_id = lock.unlock(user_id);
 
-      // Unlock previous locked box
-      delete locked_boxes[users_locking[user_id]];
-      delete users_locking[user_id];
-    }
-
-    // Check if box is free
-    if (!(id in locked_boxes)) {
-      // ... and lock it for user
-      users_locking[user_id] = id;
-      locked_boxes[id] = user_id;
-    }
+    // Lock box for user
+    lock.lock(user_id, id);
 
     // Report changes back to the Events
-    let ids_colors = Object.fromEntries(Object.entries(locked_boxes).map(([k, id]) => [k, utils.alphanumeric2Color(id)]));
-    if (previously_locked_id !== undefined) ids_colors[previously_locked_id] = 'white';
-    io.emit('lock', ids_colors);
+    lock.update_locks(io, previously_locked_id);
+  });
+
+  socket.on('unlock', () => {
+    // Define previously locked box and unlock it
+    let previously_locked_id = lock.unlock(user_id);
+
+    // Report changes back to the Events
+    lock.update_locks(io, previously_locked_id);
   });
 
   socket.on('disconnect', () => {
-    // Define previously locked box
-    let previously_locked_id = undefined;
-    if (user_id in users_locking) {
-      previously_locked_id = users_locking[user_id];
+    // Define previously locked box and unlock it
+    let previously_locked_id = lock.unlock(user_id);
 
-      // Unlock previous locked box
-      delete locked_boxes[users_locking[user_id]];
-      delete users_locking[user_id];
-
-      // Report changes to Events
-      io.emit('lock', { [previously_locked_id]: 'white' });
-    }
+    // Report changes back to the Events
+    lock.update_locks(io, previously_locked_id);
   });
 });
 
