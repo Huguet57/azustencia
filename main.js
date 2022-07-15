@@ -46,32 +46,9 @@ io.on('connection', (socket) => {
   // On connection, load locked information
   lock.update_locks(io);
 
-  socket.on('lock', id => {
-    // Define previously locked box and unlock it
-    let previously_locked_id = lock.unlock(user_id);
-
-    // Lock box for user
-    lock.lock(user_id, id);
-
-    // Report changes back to the Events
-    lock.update_locks(io, previously_locked_id);
-  });
-
-  socket.on('unlock', () => {
-    // Define previously locked box and unlock it
-    let previously_locked_id = lock.unlock(user_id);
-
-    // Report changes back to the Events
-    lock.update_locks(io, previously_locked_id);
-  });
-
-  socket.on('disconnect', () => {
-    // Define previously locked box and unlock it
-    let previously_locked_id = lock.unlock(user_id);
-
-    // Report changes back to the Events
-    lock.update_locks(io, previously_locked_id);
-  });
+  socket.on('lock', id => lock.change(io, user_id, id));
+  socket.on('unlock', () => lock.change(io, user_id, ''));
+  socket.on('disconnect', () => lock.change(io, user_id, ''));
 });
 
 server.listen(3000, () => {

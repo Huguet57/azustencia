@@ -7,12 +7,6 @@ module.exports = {
             this.users_locking = {};
         }
 
-        print() {
-            console.log(this.locked_boxes)
-            console.log(this.users_locking)
-            console.log("--------")
-        }
-
         update_locks(io, prev = undefined) {
             let ids_colors = Object.fromEntries(Object.entries(this.locked_boxes).map(([k, id]) => [k, utils.alphanumeric2Color(id)]));
             if (prev !== undefined && !(prev in this.locked_boxes)) ids_colors[prev] = 'none';
@@ -40,6 +34,17 @@ module.exports = {
                 this.users_locking[user_id] = id;
                 this.locked_boxes[id] = user_id;
             }
+        }
+
+        change(io, user_id, id) {
+            // Define previously locked box and unlock it
+            let previously_locked_id = this.unlock(user_id);
+
+            // Lock box for user
+            if (id != '') this.lock(user_id, id);
+
+            // Report changes back to the Events
+            this.update_locks(io, previously_locked_id);
         }
     }
 }

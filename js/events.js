@@ -1,5 +1,6 @@
 var socket = io();
 
+// Locking
 let caixes = document.getElementsByClassName("caixa");
 let pissarres = document.getElementsByClassName("pissarra");
 
@@ -19,3 +20,4 @@ socket.on('lock', ids_colors => {
     else caixa.style.backgroundColor = color;
   });
 });
+
