@@ -20,7 +20,7 @@ Array.from(pissarres).forEach(el => el.addEventListener('click', event => {
 
 socket.on('lock', ids_colors => {
   Object.entries(ids_colors).forEach(([id, color]) => {
-    let caixa = document.getElementById(id);
+    let caixa = document.getElementById(id).getElementsByTagName("rect")[0];
     if (color == 'none') caixa.style.fill = 'white';
     else caixa.style.fill = color;
   });

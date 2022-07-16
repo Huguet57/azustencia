@@ -1,8 +1,11 @@
-.caixa {
+.caixa rect {
     width: 200px;
     height: 50px;
     stroke: black;
     fill: white;
+}
+
+.caixa {
     transform: rotate(45deg);
 }
 

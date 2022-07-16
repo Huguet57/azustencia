@@ -7,16 +7,23 @@
   </head>
   <body>
     <svg class="pissarra" xmlns="http://www.w3.org/2000/svg">
-      <g class="rengla">
+      <g>
         <rect x=60 y=0></rect>
-        <rect x=130 y=100></rect>
-        <rect x=200 y=200></rect>
+        <text x=70 y=30>Casteller 1</text>
+      </g>
+      <g>
+        <rect x=60 y=100></rect>
+        <text x=70 y=130>Casteller 2</text>
+      </g>
+      <g>
+        <rect x=60 y=200></rect>
+        <text x=70 y=230>Casteller 3</text>
       </g>
     </svg>
 
     <script>
-      var rects = document.getElementsByTagName("rect");
-      Array.from(rects).forEach((box, i) => {
+      var gs = document.getElementsByTagName("g");
+      Array.from(gs).forEach((box, i) => {
         box.classList.add("caixa");
         box.id = "caixa-" + i.toString();
       });
