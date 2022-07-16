@@ -26,3 +26,13 @@ socket.on('lock', ids_colors => {
   });
 });
 
+window.addEventListener("keydown", event => {
+  socket.emit('keydown', event.key);
+});
+
+socket.on("editing", edit => {
+  let text = document.getElementById(edit.id).getElementsByTagName("text")[0];
+  if (edit.keyEvent.length > 1 && edit.keyEvent !== "Backspace") return false;
+  else if (edit.keyEvent === "Backspace" && text.innerHTML !== "") text.innerHTML = text.innerHTML.slice(0, -1);
+  else if (edit.keyEvent !== "Backspace") text.innerHTML += edit.keyEvent;
+})

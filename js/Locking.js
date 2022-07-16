@@ -12,6 +12,14 @@ module.exports = {
             console.log(this.users_locking)
         }
 
+        isLocked(id) {
+            return id in this.users_locking;
+        }
+
+        getLocked(id) {
+            return this.users_locking[id];
+        }
+
         update_locks(io, prev = undefined) {
             let ids_colors = Object.fromEntries(Object.entries(this.locked_boxes).map(([k, id]) => [k, utils.alphanumeric2Color(id)]));
             if (prev !== undefined && !(prev in this.locked_boxes)) ids_colors[prev] = 'none';

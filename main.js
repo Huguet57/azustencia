@@ -46,6 +46,15 @@ io.on('connection', (socket) => {
   // On connection, load locked information
   lock.update_locks(io);
 
+  socket.on('keydown', event => {
+    if (lock.isLocked(user_id)) {
+      io.emit('editing', {
+        "id": lock.getLocked(user_id),
+        "keyEvent": event
+      });
+    }
+  });
+
   socket.on('lock', id => lock.change(io, user_id, id));
   socket.on('unlock', () => lock.change(io, user_id, ''));
   socket.on('disconnect', () => lock.change(io, user_id, ''));
