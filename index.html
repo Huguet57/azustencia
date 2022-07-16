@@ -5,22 +5,25 @@
     <title>Pissarra col·laborativa</title>
 
     <link rel="stylesheet" href="./css/pissarra.css" />
-    <script src="./js/lib/svg-pan-zoom.min.js"></script>
+
     <script src="./js/lib/hammer.min.js"></script>
+    <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
   </head>
   <body>
     <svg class="pissarra" xmlns="http://www.w3.org/2000/svg">
-      <g>
-        <rect x=60 y=0></rect>
-        <text x=70 y=30>Casteller 1</text>
-      </g>
-      <g>
-        <rect x=60 y=100></rect>
-        <text x=70 y=130>Casteller 2</text>
-      </g>
-      <g>
-        <rect x=60 y=200></rect>
-        <text x=70 y=230>Casteller 3</text>
+      <g id="pissarra-content">
+        <g>
+          <rect x=60 y=0></rect>
+          <text x=70 y=30></text>
+        </g>
+        <g>
+          <rect x=60 y=100></rect>
+          <text x=70 y=130></text>
+        </g>
+        <g>
+          <rect x=60 y=200></rect>
+          <text x=70 y=230></text>
+        </g>
       </g>
     </svg>
 
