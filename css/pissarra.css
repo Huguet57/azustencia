@@ -1,11 +1,13 @@
 .caixa {
     width: 200px;
     height: 50px;
-    border: solid 1px;
+    stroke: black;
+    fill: white;
+    transform: rotate(45deg);
 }
 
 .pissarra {
     width: 1000px;
-    height: 1000px;
+    height: 500px;
     border: solid 1px;
 }

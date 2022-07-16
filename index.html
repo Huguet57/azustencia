@@ -3,15 +3,37 @@
   <head>
     <title>Pissarra col·laborativa</title>
     <link rel="stylesheet" href="./css/pissarra.css" />
+    <script src="./js/lib/svg-pan-zoom.min.js"></script>
   </head>
   <body>
-    <div class="pissarra">
-      <div class="caixa" id="caixa-0"></div>
-      <div class="caixa" id="caixa-1"></div>
-      <div class="caixa" id="caixa-2"></div>
-    </div>
+    <svg class="pissarra" xmlns="http://www.w3.org/2000/svg">
+      <g class="rengla">
+        <rect x=60 y=0></rect>
+        <rect x=130 y=100></rect>
+        <rect x=200 y=200></rect>
+      </g>
+    </svg>
+
+    <script>
+      var rects = document.getElementsByTagName("rect");
+      Array.from(rects).forEach((box, i) => {
+        box.classList.add("caixa");
+        box.id = "caixa-" + i.toString();
+      });
+
+      var panZoomTiger = svgPanZoom('.pissarra', {
+          zoomScaleSensitivity: 0.3,
+          minZoom: 0.1,
+          maxZoom: 10,
+          preventMouseEventsDefault: true,
+          fit: false,
+          contain: false,
+          center: true
+      });
+    </script>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="./js/events.js"></script>
+
   </body>
 </html>

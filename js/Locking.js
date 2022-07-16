@@ -7,6 +7,11 @@ module.exports = {
             this.users_locking = {};
         }
 
+        print() {
+            console.log(this.locked_boxes)
+            console.log(this.users_locking)
+        }
+
         update_locks(io, prev = undefined) {
             let ids_colors = Object.fromEntries(Object.entries(this.locked_boxes).map(([k, id]) => [k, utils.alphanumeric2Color(id)]));
             if (prev !== undefined && !(prev in this.locked_boxes)) ids_colors[prev] = 'none';
