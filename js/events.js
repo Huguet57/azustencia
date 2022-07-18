@@ -1,21 +1,21 @@
 var socket = io();
 
 // Dragging
-let drag = false;
-document.addEventListener('mousedown', () => drag = false);
-document.addEventListener('mousemove', () => drag = true);
+let isDragging = false;
+document.addEventListener('mousedown', () => isDragging = false);
+document.addEventListener('mousemove', () => isDragging = true);
 
 // Locking
 let caixes = document.getElementsByClassName("caixa");
 let pissarres = document.getElementsByClassName("pissarra");
 
 Array.from(caixes).forEach(el => el.addEventListener('click', event => {
-  if (!drag) socket.emit('lock', el.id);
+  if (!isDragging) socket.emit('lock', el.id);
 }));
 
 Array.from(pissarres).forEach(el => el.addEventListener('click', event => {
   let outside_box = event.target.classList.contains("pissarra") && !event.target.classList.contains("caixa");
-  if (outside_box && !drag) socket.emit('unlock');
+  if (outside_box && !isDragging) socket.emit('unlock');
 }));
 
 socket.on('lock', ids_colors => {
@@ -33,6 +33,6 @@ window.addEventListener("keydown", event => {
 socket.on("editing", edit => {
   let text = document.getElementById(edit.id).getElementsByTagName("text")[0];
   if (edit.keyEvent.length > 1 && edit.keyEvent !== "Backspace") return false;
-  else if (edit.keyEvent === "Backspace" && text.innerHTML !== "") text.innerHTML = text.innerHTML.slice(0, -1);
-  else if (edit.keyEvent !== "Backspace") text.innerHTML += edit.keyEvent;
+  else if (edit.keyEvent === "Backspace" && text.textContent !== "") text.textContent = text.textContent.slice(0, -1);
+  else if (edit.keyEvent !== "Backspace") text.textContent += edit.keyEvent;
 })

@@ -6,30 +6,69 @@
 
     <link rel="stylesheet" href="./css/pissarra.css" />
 
-    <script src="./js/lib/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
     <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
   </head>
   <body>
-    <svg class="pissarra" xmlns="http://www.w3.org/2000/svg">
-      <g id="pissarra-content">
-        <g>
-          <rect x=60 y=0></rect>
-          <text x=70 y=30></text>
+    <div class="pissarra-container">
+      <svg class="pissarra" xmlns="http://www.w3.org/2000/svg">
+        <g id="movable-content">
+          <g id="pissarra-content">
+          <g id="svg_26">
+            <g class="caixa" id="caixa-0"><rect height="30" width="92" y="97" x="366" stroke="#000" fill="#fff"></rect><text y="116.8" x="376" transform="null"></text></g>
+            <g class="caixa" id="caixa-1"><rect height="30" width="92" y="55" x="366" stroke="#000" fill="#fff"></rect><text y="74.8" x="376" transform="null"></text></g>
+            <g class="caixa" id="caixa-2"><rect transform="rotate(-45, 460, 155)" height="30" width="92" y="140" x="414" stroke="#000" fill="#fff"></rect><text y="159.8" x="424" transform="rotate(-45, 460, 155)"></text></g>
+            <g class="caixa" id="caixa-3"><rect transform="rotate(45, 368, 158)" height="30" width="92" y="143" x="322" stroke="#000" fill="#fff"></rect><text y="162.8" x="332" transform="rotate(45, 368, 158)"></text></g>
+          </g>
+          <g transform="rotate(180, 400, 483.067)" id="svg_31">
+            <g class="caixa" id="caixa-4"><rect height="30" width="92" y="452" x="352" stroke="#000" fill="#fff"></rect><text y="471.8" x="362" transform="null"></text></g>
+            <g class="caixa" id="caixa-5"><rect height="30" width="92" y="410" x="352" stroke="#000" fill="#fff"></rect><text y="429.8" x="362" transform="null"></text></g>
+            <g class="caixa" id="caixa-6"><rect transform="rotate(-45, 446, 510)" height="30" width="92" y="495" x="400" stroke="#000" fill="#fff"></rect><text y="514.8" x="410" transform="rotate(-45, 446, 510)"></text></g>
+            <g class="caixa" id="caixa-7"><rect transform="rotate(45, 354, 513)" height="30" width="92" y="498" x="308" stroke="#000" fill="#fff"></rect><text y="517.8" x="318" transform="rotate(45, 354, 513)"></text></g>
+          </g>
+          <g transform="rotate(90, 599, 314.067)" id="svg_36">
+            <g class="caixa" id="caixa-8"><rect height="30" width="92" y="283" x="551" stroke="#000" fill="#fff"></rect><text y="302.8" x="561" transform="null"></text></g>
+            <g class="caixa" id="caixa-9"><rect height="30" width="92" y="241" x="551" stroke="#000" fill="#fff"></rect><text y="260.8" x="561" transform="null"></text></g>
+            <g class="caixa" id="caixa-10"><rect transform="rotate(-45, 645, 341)" height="30" width="92" y="326" x="599" stroke="#000" fill="#fff"></rect><text y="345.8" x="609" transform="rotate(-45, 645, 341)"></text></g>
+            <g class="caixa" id="caixa-11"><rect transform="rotate(45, 553, 344)" height="30" width="92" y="329" x="507" stroke="#000" fill="#fff"></rect><text y="348.8" x="517" transform="rotate(45, 553, 344)"></text></g>
+          </g>
+          <g transform="rotate(-90, 215, 297.067)" id="svg_41">
+            <g class="caixa" id="caixa-12"><rect height="30" width="92" y="266" x="167" stroke="#000" fill="#fff"></rect><text y="285.8" x="177" transform="null"></text></g>
+            <g class="caixa" id="caixa-13"><rect height="30" width="92" y="224" x="167" stroke="#000" fill="#fff"></rect><text y="243.8" x="177" transform="null"></text></g>
+            <g class="caixa" id="caixa-14"><rect transform="rotate(-45, 261, 324)" height="30" width="92" y="309" x="215" stroke="#000" fill="#fff"></rect><text y="328.8" x="225" transform="rotate(-45, 261, 324)"></text></g>
+            <g class="caixa" id="caixa-15"><rect transform="rotate(45, 169, 327)" height="30" width="92" y="312" x="123" stroke="#000" fill="#fff"></rect><text y="331.8" x="133" transform="rotate(45, 169, 327)"></text></g>
+          </g>
+          <g id="svg_51">
+            <g class="caixa" id="caixa-16"><rect transform="rotate(-45, 339, 236.5)" height="58" width="109" y="207.5" x="284.5" stroke="#000" fill="#fff"></rect><text y="245.28" x="294" transform="rotate(-45, 339, 236.5)"></text></g>
+            <g class="caixa" id="caixa-17"><rect transform="rotate(-45, 292, 190.5)" height="58" width="109" y="161.5" x="237.5" stroke="#000" fill="#fff"></rect><text y="199.28" x="247" transform="rotate(-45, 292, 190.5)"></text></g>
+            <g class="caixa" id="caixa-18"><rect transform="rotate(-45, 244, 144.5)" height="58" width="109" y="115.5" x="189.5" stroke="#000" fill="#fff"></rect><text y="153.28" x="199" transform="rotate(-45, 244, 144.5)"></text></g>
+            <g class="caixa" id="caixa-19"><rect transform="rotate(-45, 195, 98.5)" height="58" width="109" y="69.5" x="140.5" stroke="#000" fill="#fff"></rect><text y="107.28" x="150" transform="rotate(-45, 195, 98.5)"></text></g>
+          </g>
+          <g id="svg_56">
+            <g class="caixa" id="caixa-20"><rect transform="rotate(-45, 613, 505.5)" height="58" width="109" y="476.5" x="558.5" stroke="#000" fill="#fff"></rect><text y="514.28" x="568" transform="rotate(-45, 613, 505.5)"></text></g>
+            <g class="caixa" id="caixa-21"><rect transform="rotate(-45, 566, 459.5)" height="58" width="109" y="430.5" x="511.5" stroke="#000" fill="#fff"></rect><text y="468.28" x="521" transform="rotate(-45, 566, 459.5)"></text></g>
+            <g class="caixa" id="caixa-22"><rect transform="rotate(-45, 518, 413.5)" height="58" width="109" y="384.5" x="463.5" stroke="#000" fill="#fff"></rect><text y="422.28" x="473" transform="rotate(-45, 518, 413.5)"></text></g>
+            <g class="caixa" id="caixa-23"><rect transform="rotate(-45, 469, 367.5)" height="58" width="109" y="338.5" x="414.5" stroke="#000" fill="#fff"></rect><text y="376.28" x="424" transform="rotate(-45, 469, 367.5)"></text></g>
+          </g>
+          <g id="svg_60">
+            <g class="caixa" id="caixa-24"><rect transform="rotate(45, 481.5, 238)" height="58" width="109" y="209" x="427" stroke="#000" fill="#fff"></rect><text y="247.28" x="437" transform="rotate(45, 481.5, 238)"></text></g>
+            <g class="caixa" id="caixa-25"><rect transform="rotate(45, 530.5, 193)" height="58" width="109" y="164" x="476" stroke="#000" fill="#fff"></rect><text y="202.28" x="486" transform="rotate(45, 530.5, 193)"></text></g>
+            <g class="caixa" id="caixa-26"><rect transform="rotate(45, 578.5, 149)" height="58" width="109" y="120" x="524" stroke="#000" fill="#fff"></rect><text y="158.28" x="534" transform="rotate(45, 578.5, 149)"></text></g>
+            <g class="caixa" id="caixa-27"><rect transform="rotate(45, 625.5, 104)" height="58" width="109" y="75" x="571" stroke="#000" fill="#fff"></rect><text y="113.28" x="581" transform="rotate(45, 625.5, 104)"></text></g>
+          </g>
+          <g id="svg_65">
+            <g class="caixa" id="caixa-28"><rect transform="rotate(45, 190.5, 499)" height="58" width="109" y="470" x="136" stroke="#000" fill="#fff"></rect><text y="508.28" x="146" transform="rotate(45, 190.5, 499)"></text></g>
+            <g class="caixa" id="caixa-29"><rect transform="rotate(45, 239.5, 454)" height="58" width="109" y="425" x="185" stroke="#000" fill="#fff"></rect><text y="463.28" x="195" transform="rotate(45, 239.5, 454)"></text></g>
+            <g class="caixa" id="caixa-30"><rect transform="rotate(45, 287.5, 410)" height="58" width="109" y="381" x="233" stroke="#000" fill="#fff"></rect><text y="419.28" x="243" transform="rotate(45, 287.5, 410)"></text></g>
+            <g class="caixa" id="caixa-31"><rect transform="rotate(45, 334.5, 365)" height="58" width="109" y="336" x="280" stroke="#000" fill="#fff"></rect><text y="374.28" x="290" transform="rotate(45, 334.5, 365)"></text></g>
+          </g>
+          </g>
         </g>
-        <g>
-          <rect x=60 y=100></rect>
-          <text x=70 y=130></text>
-        </g>
-        <g>
-          <rect x=60 y=200></rect>
-          <text x=70 y=230></text>
-        </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
 
     <script src="/js/svg-move.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./js/events.js"></script>
-
   </body>
 </html>
