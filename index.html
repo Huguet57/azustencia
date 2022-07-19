@@ -140,9 +140,10 @@
           document.getElementById(`caixa-${closest.i}`).querySelector("text").textContent = document.getElementById(name).textContent;
         }
 
+        if (feasibles.length > 0) document.getElementById(name).remove();
+        else document.getElementById(name).style.position = "static";
+        
         document.body.style.cursor = "default";
-        document.getElementById(name).style.position = "static";
-        document.getElementById(name).remove();
         dragging = false;
       });
     </script>
