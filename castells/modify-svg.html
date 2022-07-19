@@ -1,0 +1,31 @@
+<!-- <SVG> -->
+
+<script>
+    /*
+        Aquest és un script pensat per ser usat offline per passar un SVG normal al format adequat.
+    */
+
+    // Turn all 'g's to caixes
+    var pissarra = document.querySelector('svg');
+    var rects = pissarra.getElementsByTagName("rect");
+
+    Array.from(rects).forEach((rect, i) => {
+        let box = document.createElementNS("http://www.w3.org/2000/svg", "g");;
+        box.classList.add("caixa");
+        box.id = "caixa-" + i.toString();
+
+        let clone_rect = rect.cloneNode(false);
+        clone_rect.removeAttribute("id");
+
+        let text = document.createElement("text");
+        text.setAttribute("y", parseInt(clone_rect.getAttribute("y")) + parseInt(clone_rect.getAttribute("height"))*0.66);
+        text.setAttribute("x", parseInt(clone_rect.getAttribute("x")) + 10);
+        text.setAttribute("transform", clone_rect.getAttribute("transform"));
+
+        box.appendChild(clone_rect);
+        box.appendChild(text);
+
+        let parentNode = rect.parentNode;
+        parentNode.replaceChild(box, rect);
+    });
+</script>

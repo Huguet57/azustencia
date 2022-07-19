@@ -1,0 +1,52 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <g id="container">
+  <g id="svg_26">
+   <rect id="svg_22" height="30" width="92" y="97" x="366" stroke="#000" fill="#fff"/>
+   <rect id="svg_23" height="30" width="92" y="55" x="366" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 460, 155)" id="svg_24" height="30" width="92" y="140" x="414" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 368, 158)" id="svg_25" height="30" width="92" y="143" x="322" stroke="#000" fill="#fff"/>
+  </g>
+  <g transform="rotate(180, 400, 483.067)" id="svg_31">
+   <rect id="svg_27" height="30" width="92" y="452" x="352" stroke="#000" fill="#fff"/>
+   <rect id="svg_28" height="30" width="92" y="410" x="352" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 446, 510)" id="svg_29" height="30" width="92" y="495" x="400" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 354, 513)" id="svg_30" height="30" width="92" y="498" x="308" stroke="#000" fill="#fff"/>
+  </g>
+  <g transform="rotate(90, 599, 314.067)" id="svg_36">
+   <rect id="svg_32" height="30" width="92" y="283" x="551" stroke="#000" fill="#fff"/>
+   <rect id="svg_33" height="30" width="92" y="241" x="551" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 645, 341)" id="svg_34" height="30" width="92" y="326" x="599" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 553, 344)" id="svg_35" height="30" width="92" y="329" x="507" stroke="#000" fill="#fff"/>
+  </g>
+  <g transform="rotate(-90, 215, 297.067)" id="svg_41">
+   <rect id="svg_37" height="30" width="92" y="266" x="167" stroke="#000" fill="#fff"/>
+   <rect id="svg_38" height="30" width="92" y="224" x="167" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 261, 324)" id="svg_39" height="30" width="92" y="309" x="215" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 169, 327)" id="svg_40" height="30" width="92" y="312" x="123" stroke="#000" fill="#fff"/>
+  </g>
+  <g id="svg_51">
+   <rect transform="rotate(-45, 339, 236.5)" id="svg_47" height="58" width="109" y="207.5" x="284.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 292, 190.5)" id="svg_48" height="58" width="109" y="161.5" x="237.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 244, 144.5)" id="svg_49" height="58" width="109" y="115.5" x="189.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 195, 98.5)" id="svg_50" height="58" width="109" y="69.5" x="140.5" stroke="#000" fill="#fff"/>
+  </g>
+  <g id="svg_56">
+   <rect transform="rotate(-45, 613, 505.5)" id="svg_52" height="58" width="109" y="476.5" x="558.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 566, 459.5)" id="svg_53" height="58" width="109" y="430.5" x="511.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 518, 413.5)" id="svg_54" height="58" width="109" y="384.5" x="463.5" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(-45, 469, 367.5)" id="svg_55" height="58" width="109" y="338.5" x="414.5" stroke="#000" fill="#fff"/>
+  </g>
+  <g id="svg_60">
+   <rect transform="rotate(45, 481.5, 238)" id="svg_1" height="58" width="109" y="209" x="427" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 530.5, 193)" id="svg_57" height="58" width="109" y="164" x="476" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 578.5, 149)" id="svg_58" height="58" width="109" y="120" x="524" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 625.5, 104)" id="svg_59" height="58" width="109" y="75" x="571" stroke="#000" fill="#fff"/>
+  </g>
+  <g id="svg_65">
+   <rect transform="rotate(45, 190.5, 499)" id="svg_61" height="58" width="109" y="470" x="136" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 239.5, 454)" id="svg_62" height="58" width="109" y="425" x="185" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 287.5, 410)" id="svg_63" height="58" width="109" y="381" x="233" stroke="#000" fill="#fff"/>
+   <rect transform="rotate(45, 334.5, 365)" id="svg_64" height="58" width="109" y="336" x="280" stroke="#000" fill="#fff"/>
+  </g>
+ </g>
+</svg>

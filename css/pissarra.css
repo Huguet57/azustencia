@@ -4,7 +4,26 @@
 }
 
 .pissarra {
-    width: 1000px;
-    height: 500px;
     border: solid 1px;
+    width: 100%;
+    height: 500px;
+}
+
+.pissarra-container {
+    width: 100%;
+}
+
+.castellers {
+    width: 20%;
+    /* position: fixed;
+    right: 0; 
+    top: 0; */
+}
+
+.casteller {
+    padding: 10px;
+    border: solid 3px;
+    border-radius: 10px;
+    background-color: white;
+    height: 20px;
 }
